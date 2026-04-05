@@ -5,21 +5,21 @@
 class Lazyansible < Formula
   desc "A lazy TUI for Ansible — browse inventory, run playbooks, stream logs"
   homepage "https://github.com/kocierik/lazyansible"
-  version "1.0.2"
+  version "1.0.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kocierik/lazyansible/releases/download/v1.0.2/lazyansible_1.0.2_darwin_x86_64.tar.gz"
-      sha256 "36e114ad0b3a60d8c6e5fb07e92f2cfecb6274d68a3551d3a2c7dbcb5406c14e"
+      url "https://github.com/kocierik/lazyansible/releases/download/v1.0.3/lazyansible_1.0.3_darwin_x86_64.tar.gz"
+      sha256 "827ef7977217a89c284ec17719ad2f6730e090afe7125eb45657bdbe480a5b8d"
 
       define_method(:install) do
         bin.install "lazyansible"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kocierik/lazyansible/releases/download/v1.0.2/lazyansible_1.0.2_darwin_arm64.tar.gz"
-      sha256 "b71b6e4319ffcf0c6ddc18a4245dc3810df02323f9dd88eef53241a565588959"
+      url "https://github.com/kocierik/lazyansible/releases/download/v1.0.3/lazyansible_1.0.3_darwin_arm64.tar.gz"
+      sha256 "d669a5d9f3fe9406b9ea84acc129740d96cb34118b389cc618829ebd2358b658"
 
       define_method(:install) do
         bin.install "lazyansible"
@@ -29,22 +29,22 @@ class Lazyansible < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kocierik/lazyansible/releases/download/v1.0.2/lazyansible_1.0.2_linux_x86_64.tar.gz"
-      sha256 "a03dd5678ff4681fc46ec86a24c8ab81b7a181e16b917323b114112bac29b6c4"
+      url "https://github.com/kocierik/lazyansible/releases/download/v1.0.3/lazyansible_1.0.3_linux_x86_64.tar.gz"
+      sha256 "43a804d6ee82441ccdb7c4ef7fab2abcb06048381838649149fbaf66de0d6f06"
       define_method(:install) do
         bin.install "lazyansible"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/kocierik/lazyansible/releases/download/v1.0.2/lazyansible_1.0.2_linux_armv6.tar.gz"
-      sha256 "76110ae6730370c0df0df662c2b27348e683b127415449ce553d198b5039f170"
+      url "https://github.com/kocierik/lazyansible/releases/download/v1.0.3/lazyansible_1.0.3_linux_armv6.tar.gz"
+      sha256 "6e04c70afe760ee8ff3ae0f5791853bf01b86469ac7e29f1b52cd946cee47ca1"
       define_method(:install) do
         bin.install "lazyansible"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kocierik/lazyansible/releases/download/v1.0.2/lazyansible_1.0.2_linux_arm64.tar.gz"
-      sha256 "c50385ef768f272b0c84523b13c754517861bd3287de3ed52e647eda0d11c02c"
+      url "https://github.com/kocierik/lazyansible/releases/download/v1.0.3/lazyansible_1.0.3_linux_arm64.tar.gz"
+      sha256 "1ca3445481d5398246a3caf9749196ed86760cba23c39cae769a756baad49ccb"
       define_method(:install) do
         bin.install "lazyansible"
       end
